@@ -1,0 +1,19 @@
+Problem: Minimum Windows Substring 
+
+Given a string s and string t, find the minimum windows in s will contain
+all the charactes in T in complexity O(n);
+
+MinWindows Sild 
+  
+	do hash map for target string.
+	for i <- 0 in [0, src-len ]
+		src_map[src[i]] += 1
+		if src_map[src[i]] less than tar_map[src[i]]
+		    found += 1
+		if found equal tar_len
+		    jump the character than not in target string.
+			update begin, end, min len
+			found -= 1
+			src_map[src[i]] -= 1
+
+
