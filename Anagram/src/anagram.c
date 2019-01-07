@@ -2,7 +2,7 @@
 
 bool IsAnagrame(char *src , char *dst)
 {
-
+#if 0
 	if (src == NULL || dst == NULL)
 	{
 		return false;
@@ -41,4 +41,20 @@ bool IsAnagrame(char *src , char *dst)
 		}	
 	}
 	return false;
+#endif
+	u32 i = 0;
+	Hash src_map, dst_map;
+	HashMap_Init(&src_map, src, strlen(src));
+	HashMap_Init(&dst_map, dst, strlen(dst));
+	HashShow(&src_map);
+	HashShow(&dst_map);
+
+	for (i=0; i<ALPHABET_MAX; i++)
+	{
+		if (src_map.hash[i] != dst_map.hash[i])
+		{
+			return false;
+		}
+	}
+	return true;
 }

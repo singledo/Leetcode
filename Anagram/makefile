@@ -2,10 +2,12 @@ cc=gcc
 cflag=-g
 
 inc=-I ../com/inc \
-	-I ./inc
+	-I ./inc \
+	-I ../MinWindows/inc
 
 src=./src/anagram.c \
-	./src/main.c
+	./src/main.c \
+	../MinWindows/src/HashMap.c
 
 obj=$(src:.o=.c)
 
