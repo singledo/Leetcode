@@ -46,8 +46,8 @@ bool IsAnagrame(char *src , char *dst)
 	Hash src_map, dst_map;
 	HashMap_Init(&src_map, src, strlen(src));
 	HashMap_Init(&dst_map, dst, strlen(dst));
-	HashShow(&src_map);
-	HashShow(&dst_map);
+	// HashShow(&src_map);
+// 	HashShow(&dst_map);
 
 	for (i=0; i<ALPHABET_MAX; i++)
 	{
