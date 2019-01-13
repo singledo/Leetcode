@@ -100,6 +100,7 @@ void TwoListAdd(Node *num_1, Node *num_2, Node *total)
 		}
 		new->next = NULL;
 		new->val = 1;
+		
 		res->next = new;
 	}
 
