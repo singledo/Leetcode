@@ -3,24 +3,19 @@ cflag=-g
 
 inc=-I ../com/inc \
 	-I ./inc \
-	-I ../MinWindows/inc
 
-src=./src/anagram.c \
-	./src/main.c \
-	../MinWindows/src/HashMap.c
+src=./src/list.c \
+	./src/main.c 
 
-obj=$(src:.o=.c)
+obj=$(src:.c=.o)
 
-tar=anagram.out
+tar=list.out
 
 $(tar): $(obj)
-	@echo $(obj)
 	$(cc) $(cflag) $(inc) -o $@ $^
-
 
 %.o: %.c
 	$(cc) $(cflag) $(inc) -o $@ -c $<
-
 
 
 clean:
@@ -28,4 +23,4 @@ clean:
 
 
 
-	
+
